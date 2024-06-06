@@ -14,7 +14,7 @@ async def start(message: types.Message):
 
 def generate_image(prompt_text):
     prompt = {
-        "modelUri": "art://b1gn5bep27g6f953ec6h/yandex-art/latest",
+        "modelUri": "art://",
         "generationOptions": {
             "seed": randint(10000, 99999999999999)
         },
@@ -26,11 +26,11 @@ def generate_image(prompt_text):
         ]
     }
 
-    url = "https://llm.api.cloud.yandex.net/foundationModels/v1/imageGenerationAsync"
+    url = ""
 
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Api-Key AQVNyRxVnnqlhLRdyaCo3lwKk3XJZUXw2jMPPZua"
+        "Authorization": "Api-Key "
     }
 
     response = requests.post(url=url, headers=headers, json=prompt)
